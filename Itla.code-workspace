@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../salem/vali admin system"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "vali admin system"
+	}
+}
