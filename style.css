@@ -1,42 +1,87 @@
-body{
-display: flex;
-gap: 2;
-margin: 0;
-padding: 10%;
-background-color: black;
-justify-content: left;
-text-align: center;
-height: 100vh;
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
 }
 
-
-.buttons{
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 10px;
-
+.calculator {
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    width: 400px;
+    height: 600px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#display{
-width: 600px;
-margin-bottom: 0;
-font-size: 1.5em;
-background-color: aqua;
+.calculator-screen {
+    width: 100%;
+    height: 80px;
+    border: none;
+    background-color: #252525;
+    color: #fff;
+    text-align: right;
+    padding: 20px;
+    font-size: 2.4rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-sizing: border-box;
 }
 
-#add{
-width: 300px;
-height: 300px;
-justify-content: right;
-align-items: center;
-font-size: 1.5em;
-background-color: rgb(214, 173, 70);
-margin: 20px;
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 20px;
 }
 
-button{
-font-size: 1.5em;
-color: rgb(4, 4, 26);
-background-color: rgb(82, 194, 80);
-padding: 5px;
+button {
+    height: 80px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.4rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.operator {
+    background-color: #f39c12;
+    color: #fff;
+}
+
+.operator:active {
+    background-color: #e08e0b;
+}
+
+.equal-sign {
+    background-color: #2ecc71;
+    color: #fff;
+    grid-column: span 2;
+}
+
+.equal-sign:active {
+    background-color: #27ae60;
+}
+
+.all-clear {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.all-clear:active {
+    background-color: #c0392b;
+}
+
+.decimal {
+    background-color: #d4d4d2;
+}
+
+button:not(.operator):not(.equal-sign):not(.all-clear):not(.decimal) {
+    background-color: #e0e0e0;
 }
